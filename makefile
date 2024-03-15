@@ -32,6 +32,9 @@ image: ## 🔨 Build container image from Dockerfile
 push: ## 📤 Push container image to registry 
 	docker push $(IMAGE_REG)/$(IMAGE_REPO):$(IMAGE_TAG)
 
+login: ## 🔒 Log in to Docker Hub
+	docker login -u anbazhagan24s -p 2442816@anbU
+
 run: ## 🏃‍ Run locally using Dotnet CLI
 	dotnet watch --project $(SRC_DIR)/dotnet-demoapp.csproj
 
